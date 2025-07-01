@@ -1,5 +1,5 @@
 import { registerLocaleData } from '@angular/common';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import localeEs from '@angular/common/locales/es';
 import {
   ApplicationConfig,
@@ -18,13 +18,10 @@ registerLocaleData(localeEs, 'es');
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    importProvidersFrom(HttpClientModule),
+    
     { provide: LOCALE_ID, useValue: 'es' },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: SpinnerInterceptor,
-      multi: true,
-    },
+    
+    provideHttpClient(withFetch(), withInterceptors([SpinnerInterceptor])),
     provideAnimations(),
     provideToastr({
       positionClass: 'toast-bottom-right',
