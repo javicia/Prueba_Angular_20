@@ -60,10 +60,4 @@ Nx Console es una extensión para editores que mejora tu experiencia de desarrol
 - [Documentación de Nx](https://nx.dev)
 - [Comunidad de Nx en Discord](https://go.nx.dev/community)
 
-## Conéctate con Dominicode
-
-- [Canal de YouTube de Dominicode](https://www.youtube.com/@Dominicode)
-- [Síguenos en Twitter](https://twitter.com/Dominicode)
-- [Únete a nuestro grupo en LinkedIn](https://www.linkedin.com/in/dominicode)
-
 ¡Esperamos que disfrutes del curso y aprendas mucho sobre Angular moderno!
