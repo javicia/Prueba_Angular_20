@@ -1,10 +1,4 @@
-# Angular Moderno con Dominicode
-
-Bienvenido al repositorio del curso de Angular Moderno con Dominicode. Aquí aprenderás a construir aplicaciones modernas utilizando Angular y las mejores prácticas de la industria.
-
-## Introducción
-
-Este curso está diseñado para desarrolladores que desean mejorar sus habilidades en Angular y aprender a utilizar herramientas modernas como Nx para la gestión de proyectos.
+# Angular Moderno
 
 ## Requisitos
 
