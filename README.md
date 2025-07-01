@@ -1,10 +1,4 @@
-# Angular Moderno con Dominicode
-
-Bienvenido al repositorio del curso de Angular Moderno con Dominicode. Aquí aprenderás a construir aplicaciones modernas utilizando Angular y las mejores prácticas de la industria.
-
-## Introducción
-
-Este curso está diseñado para desarrolladores que desean mejorar sus habilidades en Angular y aprender a utilizar herramientas modernas como Nx para la gestión de proyectos.
+# Angular Moderno
 
 ## Requisitos
 
@@ -65,11 +59,5 @@ Nx Console es una extensión para editores que mejora tu experiencia de desarrol
 - [Documentación de Angular](https://angular.io/docs)
 - [Documentación de Nx](https://nx.dev)
 - [Comunidad de Nx en Discord](https://go.nx.dev/community)
-
-## Conéctate con Dominicode
-
-- [Canal de YouTube de Dominicode](https://www.youtube.com/@Dominicode)
-- [Síguenos en Twitter](https://twitter.com/Dominicode)
-- [Únete a nuestro grupo en LinkedIn](https://www.linkedin.com/in/dominicode)
 
 ¡Esperamos que disfrutes del curso y aprendas mucho sobre Angular moderno!
