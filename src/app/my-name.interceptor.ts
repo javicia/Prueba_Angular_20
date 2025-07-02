@@ -1,4 +1,3 @@
-import { SpinnerInterceptor as SharedSpinnerInterceptor } from '@shared/interceptors/spinner.interceptor';
 import { HttpInterceptorFn } from '@angular/common/http';
 import { SpinnerService } from '@shared/services/spinner.service';
 import { inject } from '@angular/core';
