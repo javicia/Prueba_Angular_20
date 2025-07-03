@@ -20,7 +20,7 @@ export default class ProductsComponent implements OnInit {
   private readonly _productsService = inject(ProductsService);
   private readonly _cartService = inject(CartStateService);
 
-  products$ = toSignal(this._productsService.products$)
+  products = this._productsService.products;
 
   ngOnInit() {
     this._route.queryParams.subscribe((params) => {
