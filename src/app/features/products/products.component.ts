@@ -6,6 +6,8 @@ import { CartStateService } from 'src/app/store/cart-state/cart-state.service';
 import { CardComponent } from '@features/products/card/card.component';
 import { Product } from '@features/products/product.interface';
 import { ProductsService } from '@features/products/products.service';
+import { Observable, Subscription } from 'rxjs';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-products',
@@ -19,7 +21,7 @@ export default class ProductsComponent implements OnInit {
   private readonly _productsService = inject(ProductsService);
   private readonly _cartService = inject(CartStateService);
 
-  products$ = this._productsService.products$;
+  products$ = toSignal(this._productsService.products$)
 
   ngOnInit() {
     this._route.queryParams.subscribe((params) => {
@@ -32,3 +34,4 @@ export default class ProductsComponent implements OnInit {
     this._cartService.addToCart(product);
   }
 }
+
