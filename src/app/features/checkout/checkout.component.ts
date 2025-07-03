@@ -1,5 +1,4 @@
 import {
-  AsyncPipe,
   CurrencyPipe,
   SlicePipe,
 } from '@angular/common';
@@ -15,8 +14,7 @@ import { RemoveProductComponent } from '@shared/ui/remove/remove-product.compone
   imports: [
     RemoveProductComponent,
     SlicePipe,
-    CurrencyPipe,
-    AsyncPipe,
+    CurrencyPipe
   ],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.scss',
