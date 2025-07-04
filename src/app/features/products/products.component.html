@@ -1,4 +1,5 @@
 <section class="product-container">
+  @defer (on viewport; prefetch on idle) {
   <div class="product-grid">
     @for (product of products(); track product.id) {
       <app-card (addToCartEvent)="onAddToCart($event)" data-testid="product-card" class="product-card"
@@ -8,4 +9,17 @@
       <p>No result yet!</p>
     }
   </div>
+}@loading (minimum 500ms) {
+<div class="loading-state">
+   <p>Cargando los productos</p>
+  </div>
+}@placeholder {
+  <div class="loading-placeholder">
+   <p>Desplazate para cargar los productos</p>
+  </div>
+}@error {
+  <div class="error-state">
+    <p>Error al cargar los productos</p>
+  </div>
+}
 </section>
