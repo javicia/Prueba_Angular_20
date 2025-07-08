@@ -1,13 +1,13 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, effect, inject, signal } from '@angular/core';
 import { CategoryService } from '@features/categories/categories.service';
 import { CategoryButtonComponent } from '../categoty-button/category-button.component';
+import { ProductsService } from '@features/products/products.service';
 
 @Component({
   selector: 'app-category-filter',
   standalone: true,
-  imports: [AsyncPipe, CategoryButtonComponent],
+  imports: [CategoryButtonComponent],
   styleUrl: './category-filter.component.scss',
   template: `
     <h2 class="heading">
@@ -18,7 +18,7 @@ import { CategoryButtonComponent } from '../categoty-button/category-button.comp
       <li>
        <app-category-button category="ALL" [(filterCategory)]="selectedCategory"/>
       </li>
-       @for (category of categories$ | async; track category;) {
+       @for (category of categories(); track category;) {
       <li>
         <app-category-button [category]="category" [(filterCategory)]="selectedCategory"/>
       </li>
@@ -27,16 +27,13 @@ import { CategoryButtonComponent } from '../categoty-button/category-button.comp
   `,
 })
 export class CategoryFilterComponent {
-  readonly categories$ = inject(CategoryService).categories$;
-
-  private readonly _router = inject(Router);
+  readonly categories = inject(CategoryService).categories;
+  private readonly _productService = inject(ProductsService);
   selectedCategory = signal<string>('all');
 
-  onClick(category: string): void {
-    this._router.navigate([], {
-      queryParams: { category: category === 'all' ? null : category },
-      queryParamsHandling: 'merge',
-      replaceUrl: true,
-    });
+  constructor() {
+   effect(() => this._productService.filterProductsByCategory(this.selectedCategory()),
+      { allowSignalWrites: true }
+  );
   }
 }

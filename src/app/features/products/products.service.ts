@@ -31,7 +31,7 @@ export class ProductsService {
   }
 
   filterProductsByCategory(category: string): void {
-    if (category === 'all') {
+    if (category.toLowerCase() === 'all') {
       this._filteredProducts.set(this._allProducts());
     } else {
       const filtered = this._allProducts().filter(
