@@ -1,13 +1,27 @@
 {
   "compilerOptions": {
     "paths": {
-      "@api/*": ["src/app/api/*"],
-      "@features/*": ["src/app/features/*"],
-      "@shared/*": ["src/app/shared/*"],
-      "@store/*": ["src/app/store/cart-state/store/*"],
-      "@models/*": ["src/app/models/*"],
-      "@layout/*": ["src/app/layout/*"],
-      "@envs/*": ["src/environments/*"]
+      "@api/*": [
+        "src/app/api/*"
+      ],
+      "@envs/*": [
+        "src/environments/*"
+      ],
+      "@features/*": [
+        "src/app/features/*"
+      ],
+      "@layout/*": [
+        "src/app/layout/*"
+      ],
+      "@models/*": [
+        "src/app/models/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@store/*": [
+        "src/app/store/cart-state/store/*"
+      ]
     },
     "rootDir": ".",
     "sourceMap": true,
@@ -18,7 +32,10 @@
     "importHelpers": true,
     "target": "es2022",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -44,7 +61,10 @@
     }
   ],
   "compileOnSave": false,
-  "exclude": ["node_modules", "tmp"],
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

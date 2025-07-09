@@ -1,4 +1,3 @@
-import { AsyncPipe } from '@angular/common';
 import { Component, effect, inject, signal } from '@angular/core';
 import { CategoryService } from '@features/categories/categories.service';
 import { CategoryButtonComponent } from '../categoty-button/category-button.component';
