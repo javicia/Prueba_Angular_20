@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { CartStore } from './cart-state.service';
-
 @Injectable({ providedIn: 'root' })
 export class CartStorageService {
   private readonly STORAGE_KEY = 'cart_state';

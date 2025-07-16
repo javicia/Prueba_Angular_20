@@ -1,11 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CartStateService } from 'src/app/store/cart-state/cart-state.service';
+import { CartStateService } from '@store/cart-state/cart-state.service';
 
-import { CardComponent } from '@features/products/card/card.component';
-import { Product } from '@features/products/product.interface';
-import { ProductsService } from '@features/products/products.service';
-import { toSignal } from '@angular/core/rxjs-interop';
+import { CardComponent } from './card/card.component';
+import { Product } from './product.interface';
+import { ProductsService } from './products.service';
 
 @Component({
   selector: 'app-products',
@@ -17,7 +16,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 export default class ProductsComponent implements OnInit {
   private readonly _route = inject(ActivatedRoute);
   private readonly _productsService = inject(ProductsService);
-  private readonly _cartService = inject(CartStateService);
+  private readonly _cartService: CartStateService = inject(CartStateService);
 
   products = this._productsService.products;
 

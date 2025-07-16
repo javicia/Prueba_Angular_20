@@ -2,10 +2,8 @@ import { Injectable, Signal } from '@angular/core';
 import {
   PaymentProcessor,
   PaymentResult,
-} from '@features/checkout/checkout.interface';
-import { CartStore } from 'src/app/store/cart-state/cart-state.service';
-
-import { Observable } from 'rxjs';
+} from './checkout.interface';
+import { CartStore } from '@store/cart-state/cart-state.service';
 
 @Injectable({ providedIn: 'root' })
 export class CheckoutService implements PaymentProcessor {
